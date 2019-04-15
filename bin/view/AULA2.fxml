@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1272.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AULA2Controller">
+    <BorderPane layoutX="68.0" layoutY="-68.0" prefHeight="566.0" prefWidth="1272.0" AnchorPane.bottomAnchor="-72.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <center>
+            <ScrollPane BorderPane.alignment="CENTER">
+                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <HBox>
+                     <Button mnemonicParsing="false" onAction="#comDifusaoAnisotropica" text="Com difusão">
+                        <HBox.margin>
+                           <Insets bottom="10.0" left="15.0" top="15.0" />
+                        </HBox.margin>
+                     </Button>
+                     <Button mnemonicParsing="false" onAction="#semDifusaoAnisotropica" text="Sem difusão">
+                        <HBox.margin>
+                           <Insets left="15.0" top="15.0" />
+                        </HBox.margin>
+                     </Button>
+                     <TextField fx:id="qtSeeds" promptText="Quantidade seeds">
+                        <HBox.margin>
+                           <Insets left="5.0" top="15.0" />
+                        </HBox.margin>
+                     </TextField>
+                     <TextField fx:id="iteracoes" promptText="Iterações">
+                        <HBox.margin>
+                           <Insets left="5.0" top="15.0" />
+                        </HBox.margin>
+                     </TextField>
+                                     <Button mnemonicParsing="false" onAction="#salvar" text="Salvar">
+                        <HBox.margin>
+                           <Insets left="15.0" top="15.0" />
+                        </HBox.margin></Button>
+                                </HBox>
+                                <HBox>
+                                    <VBox>
+                                        <Button mnemonicParsing="false" onAction="#abreImagem1" text="Abrir Imagem">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Button>
+                                        <ScrollPane prefHeight="500.0" prefWidth="440.0">
+                                            <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                <ImageView fx:id="img1" fitHeight="250.0" fitWidth="165.0" layoutX="25.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                            </AnchorPane>
+                                        </ScrollPane>
+                                    </VBox>
+                                    <VBox layoutX="10.0" layoutY="10.0">
+                        <Label text="RGB">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Label>
+                                        <ScrollPane prefHeight="500.0" prefWidth="440.0">
+                                            <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                <ImageView fx:id="img2" fitHeight="250.0" fitWidth="165.0" layoutX="25.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                            </AnchorPane>
+                           <VBox.margin>
+                              <Insets left="5.0" top="18.0" />
+                           </VBox.margin>
+                                        </ScrollPane>
+                                    </VBox>
+                                    <VBox layoutX="260.0" layoutY="10.0">
+                        <Label text="HSV (HSB)">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Label>
+                                        <ScrollPane prefHeight="500.0" prefWidth="440.0">
+                                            <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                <ImageView fx:id="img3" fitHeight="250.0" fitWidth="165.0" layoutX="25.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                            </AnchorPane>
+                           <VBox.margin>
+                              <Insets left="5.0" top="18.0" />
+                           </VBox.margin>
+                                        </ScrollPane>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                                    </VBox>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                                </HBox>
+                            </VBox>
+                    </AnchorPane>
+            </ScrollPane>
+        </center>
+    </BorderPane>
+</AnchorPane>
